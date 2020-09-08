@@ -6,7 +6,7 @@
 
 module teach_soc_top(
     input           clk,
-    input           reset,
+    input           resetn,
     
     // ----- GPIO -----
     input           mid_btn_key,
@@ -59,7 +59,7 @@ wire [31:0] confreg_rdata;
 // cpu    
 mycpu_top cpu (
     .clk              (soc_clk   ),
-    .resetn           (reset     ),  //low active
+    .resetn           (resetn    ),  //low active
     .int              (6'd0      ),  //interrupt,high active
 
     .inst_sram_en     (cpu_inst_en   ),
@@ -94,7 +94,7 @@ inst_ram inst_ram (
 // bridge 1x2
 bridge_1x2 bridge_1x2 (
     .clk            (soc_clk        ),
-    .reset          (reset          ),
+    .reset          (~resetn        ),
     
     .cpu_data_en    (cpu_data_en    ),
     .cpu_data_wen   (cpu_data_wen   ),
@@ -128,7 +128,7 @@ data_ram data_ram (
 // confreg
 confreg confreg (
     .clk          (soc_clk       ),
-    .rst          (reset         ),
+    .rst          (~resetn       ),
     
     .confreg_en   (confreg_en    ),
     .confreg_wen  (confreg_wen   ),
