@@ -70,7 +70,7 @@ module single_cycle(
 
     confreg confreg0(
         .clk(clk),
-        .rstn(rstn),
+        .rst(~rstn),
 
         .confreg_wen(confreg_wen),
         .confreg_write_data(confreg_wdata),

@@ -13,7 +13,7 @@
 
 module confreg(
     input   wire        clk,
-    input   wire        rstn,
+    input   wire        rst,
 
     input   wire        confreg_wen,
     input   wire[31:0]  confreg_write_data,
@@ -71,7 +71,7 @@ endfunction
     wire mid_btn_key_sample= mid_btn_key_count[19];
 
     always @ (posedge clk) begin
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             mid_btn_key_flag <= 1'b0;
         end else if (mid_btn_key_sample) begin
             mid_btn_key_flag <= 1'b0;
@@ -79,13 +79,13 @@ endfunction
             mid_btn_key_flag <= 1'b1;
         end
 
-        if (rstn == `RST_ENABLE || !mid_btn_key_flag) begin
+        if (rst == `RST_ENABLE || !mid_btn_key_flag) begin
             mid_btn_key_count <= 20'b0;
         end else begin
             mid_btn_key_count <= mid_btn_key_count + 1'b1;
         end
 
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             mid_btn_key_r <= 1'b0;
         end else if (mid_btn_key_sample) begin
             mid_btn_key_r <= mid_btn_key;
@@ -104,7 +104,7 @@ endfunction
     wire left_btn_key_sample= left_btn_key_count[19];
 
     always @ (posedge clk) begin
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             left_btn_key_flag <= 1'b0;
         end else if (left_btn_key_sample) begin
             left_btn_key_flag <= 1'b0;
@@ -112,13 +112,13 @@ endfunction
             left_btn_key_flag <= 1'b1;
         end
 
-        if (rstn == `RST_ENABLE || !left_btn_key_flag) begin
+        if (rst == `RST_ENABLE || !left_btn_key_flag) begin
             left_btn_key_count <= 20'b0;
         end else begin
             left_btn_key_count <= left_btn_key_count + 1'b1;
         end
 
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             left_btn_key_r <= 1'b0;
         end else if (left_btn_key_sample) begin
             left_btn_key_r <= left_btn_key;
@@ -137,7 +137,7 @@ endfunction
     wire right_btn_key_sample= right_btn_key_count[19];
 
     always @ (posedge clk) begin
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             right_btn_key_flag <= 1'b0;
         end else if (right_btn_key_sample) begin
             right_btn_key_flag <= 1'b0;
@@ -145,13 +145,13 @@ endfunction
             right_btn_key_flag <= 1'b1;
         end
 
-        if (rstn == `RST_ENABLE || !right_btn_key_flag) begin
+        if (rst == `RST_ENABLE || !right_btn_key_flag) begin
             right_btn_key_count <= 20'b0;
         end else begin
             right_btn_key_count <= right_btn_key_count + 1'b1;
         end
 
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             right_btn_key_r <= 1'b0;
         end else if (right_btn_key_sample) begin
             right_btn_key_r <= right_btn_key;
@@ -170,7 +170,7 @@ endfunction
     wire up_btn_key_sample= up_btn_key_count[19];
 
     always @ (posedge clk) begin
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             up_btn_key_flag <= 1'b0;
         end else if (up_btn_key_sample) begin
             up_btn_key_flag <= 1'b0;
@@ -178,13 +178,13 @@ endfunction
             up_btn_key_flag <= 1'b1;
         end
 
-        if (rstn == `RST_ENABLE || !up_btn_key_flag) begin
+        if (rst == `RST_ENABLE || !up_btn_key_flag) begin
             up_btn_key_count <= 20'b0;
         end else begin
             up_btn_key_count <= up_btn_key_count + 1'b1;
         end
 
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             up_btn_key_r <= 1'b0;
         end else if (up_btn_key_sample) begin
             up_btn_key_r <= up_btn_key;
@@ -203,7 +203,7 @@ endfunction
     wire down_btn_key_sample= down_btn_key_count[19];
 
     always @ (posedge clk) begin
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             down_btn_key_flag <= 1'b0;
         end else if (down_btn_key_sample) begin
             down_btn_key_flag <= 1'b0;
@@ -211,13 +211,13 @@ endfunction
             down_btn_key_flag <= 1'b1;
         end
 
-        if (rstn == `RST_ENABLE || !down_btn_key_flag) begin
+        if (rst == `RST_ENABLE || !down_btn_key_flag) begin
             down_btn_key_count <= 20'b0;
         end else begin
             down_btn_key_count <= down_btn_key_count + 1'b1;
         end
 
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             down_btn_key_r <= 1'b0;
         end else if (down_btn_key_sample) begin
             down_btn_key_r <= down_btn_key;
@@ -233,7 +233,7 @@ endfunction
     assign write_led = confreg_wen & (confreg_addr[15:0] == `LED_ADDR);
 
     always @ (posedge clk) begin
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             led_v <= switch;
         end else begin
             if (write_led) begin
@@ -252,7 +252,7 @@ endfunction
     assign write_digital_num = confreg_wen & (confreg_addr[15:0] == `DIGITAL_NUM_ADDR);
 
     always @ (posedge clk) begin
-        if(rstn == `RST_ENABLE) begin
+        if(rst == `RST_ENABLE) begin
             digital_num_v <= 32'b0;
         end else begin
             if (write_digital_num) begin
@@ -266,7 +266,7 @@ endfunction
     assign digital_num1 = num_a_g2;
 
     always @ (posedge clk) begin
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             count <= 20'b0;
         end else begin
             count <= count + 1;
@@ -274,7 +274,7 @@ endfunction
     end
 
     always @ (posedge clk) begin
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             scan_data1 <= 4'b0;
             scan_data2 <= 4'b0;
             scan_enable <= 8'b0;
@@ -306,7 +306,7 @@ endfunction
     end
 
     always @ (posedge clk) begin
-        if (rstn == `RST_ENABLE) begin
+        if (rst == `RST_ENABLE) begin
             num_a_g1 <= 7'b0;
             num_a_g2 <= 7'b0;
         end else begin
