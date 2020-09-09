@@ -7,9 +7,9 @@ module testbench();
         clk = 1'b0;
         #100 rstn = 1'b0;
     end
-    
+
     always #5 clk = ~clk;
-    
+
     single_cycle single_cycle0(
         .rstn(rstn),
         .clk(clk)

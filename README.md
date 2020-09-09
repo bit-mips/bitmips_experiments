@@ -7,4 +7,3 @@ git clone https://github.com/bit-mips/bitmips_experiments.git
 ```
 
 **请参考[实验指导手册](https://github.com/bit-mips/bitmips_experiments_doc)来做实验。**
-
