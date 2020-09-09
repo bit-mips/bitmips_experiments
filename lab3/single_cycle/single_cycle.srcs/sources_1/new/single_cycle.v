@@ -25,7 +25,7 @@ module single_cycle(
     wire[31:0]  data_ram_rdata;
     
     mycpu mycpu0(
-        .rstn(rstn),                                  // input
+        .rstn(rstn),                                // input, low activate
         .clk(clk),                                  // input
         
         .inst_rom_addr(inst_rom_addr),              // output
@@ -70,7 +70,7 @@ module single_cycle(
     
     confreg confreg0(
         .clk(clk),
-        .rst(rst),
+        .rst(~rstn),
         
         .confreg_wen(confreg_wen),
         .confreg_write_data(confreg_wdata),

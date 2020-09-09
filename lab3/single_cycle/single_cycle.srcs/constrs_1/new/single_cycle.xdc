@@ -77,9 +77,9 @@ set_property PACKAGE_PIN G4 [get_ports {led[6]}]
 set_property PACKAGE_PIN F6 [get_ports {led[7]}]
 
 set_property PACKAGE_PIN T5 [get_ports clk]
-set_property PACKAGE_PIN P15 [get_ports rst]
+set_property PACKAGE_PIN P15 [get_ports rstn]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
-set_property IOSTANDARD LVCMOS33 [get_ports rst]
+set_property IOSTANDARD LVCMOS33 [get_ports rstn]
 
 set_property IOSTANDARD LVCMOS33 [get_ports down_btn_key]
 set_property IOSTANDARD LVCMOS33 [get_ports left_btn_key]
