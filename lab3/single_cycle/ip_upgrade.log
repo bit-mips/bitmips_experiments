@@ -1,0 +1,37 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Wed Sep  9 16:55:55 2020
+| Host         : fky-arch running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7a35tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'inst_rom'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of inst_rom (xilinx.com:ip:dist_mem_gen:8.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Wed Sep  9 16:55:55 2020
+| Host         : fky-arch running 64-bit Arch Linux
+| Command      : upgrade_ip
+| Device       : xc7a35tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'data_ram'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of data_ram (xilinx.com:ip:dist_mem_gen:8.0) from (Rev. 12) to (Rev. 13)
+

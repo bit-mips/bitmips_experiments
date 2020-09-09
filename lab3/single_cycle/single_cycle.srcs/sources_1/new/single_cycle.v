@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module single_cycle(
-    input   wire    rst,
+    input   wire    rstn,
     input   wire    clk,
     
     /********* confreg *********/
@@ -25,7 +25,7 @@ module single_cycle(
     wire[31:0]  data_ram_rdata;
     
     mycpu mycpu0(
-        .rst(rst),                                  // input
+        .rstn(rstn),                                  // input
         .clk(clk),                                  // input
         
         .inst_rom_addr(inst_rom_addr),              // output
@@ -70,7 +70,7 @@ module single_cycle(
     
     confreg confreg0(
         .clk(clk),
-        .rst(rst),
+        .rstn(rstn),
         
         .confreg_wen(confreg_wen),
         .confreg_write_data(confreg_wdata),
