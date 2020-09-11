@@ -27,7 +27,7 @@ module bridge_1x2(
     output  [3 :0]  confreg_wen,
     output  [31:0]  confreg_addr,
     output  [31:0]  confreg_wdata,
-    output  [31:0]  confreg_rdata
+    input   [31:0]  confreg_rdata
     );
     
     wire sel_sram;

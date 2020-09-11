@@ -21,6 +21,12 @@ module teach_soc_top(
     output  [7:0]   led
 );
 
+wire[31:0] debug_wb_pc; 
+wire[3:0] debug_wb_rf_wen;
+wire[4:0] debug_wb_rf_wnum;
+wire[31:0] debug_wb_rf_wdata;
+
+
 // clk pll
 wire soc_clk;
 clk_pll clk_pll(
@@ -86,7 +92,7 @@ inst_ram inst_ram (
   .clka (soc_clk            ),  // input wire clka
   .ena  (cpu_inst_en        ),  // input wire ena
   .wea  (cpu_inst_wen       ),  // input wire [3 : 0] wea
-  .addra(cpu_inst_addr[15:2]),  // input wire [13 : 0] addra
+  .addra(cpu_inst_addr[17:2]),  // input wire [15 : 0] addra
   .dina (cpu_inst_wdata     ),  // input wire [31 : 0] dina
   .douta(cpu_inst_rdata     )   // output wire [31 : 0] douta
 );
@@ -120,7 +126,7 @@ data_ram data_ram (
   .clka (soc_clk             ),  // input wire clka
   .ena  (data_sram_en        ),  // input wire ena
   .wea  (data_sram_wen       ),  // input wire [3 : 0] wea
-  .addra(data_sram_addr[15:2]),  // input wire [13 : 0] addra
+  .addra(data_sram_addr[13:2]),  // input wire [11 : 0] addra
   .dina (data_sram_wdata     ),  // input wire [31 : 0] dina
   .douta(data_sram_rdata     )   // output wire [31 : 0] douta
 );
