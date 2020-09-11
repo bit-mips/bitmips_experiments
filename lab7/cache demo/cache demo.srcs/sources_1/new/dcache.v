@@ -150,7 +150,7 @@ module dcache(
                 if (cpu write && hit0 && valid0) || (miss reload && write && lru[data_addr_r[11:5]] == 1'b0) begin
                     dirty_way0[data_addr_r[11:5]] = 1'b1;
                 end else if (miss reload && read && lru[data_addr_r[11:5]] == 1'b0) begin
-                    dirty_way0[data_addr_r[11:5]] = 1'b1;
+                    dirty_way0[data_addr_r[11:5]] = 1'b0;
                 end
             */
         end
@@ -171,7 +171,7 @@ module dcache(
             /*
                 if ( cpu write || cpu read ) begin
                     if hit0 && valid0 begin lru[data_addr_r[11:5]] = 1'b1; end // way 0 is used this time, replace way1 next time
-                    if hit1 && valid1 begin lru[data_addr_r[11:5]] = 1'b1; end // way 1 is used this time, replace way0 next time
+                    if hit1 && valid1 begin lru[data_addr_r[11:5]] = 1'b0; end // way 1 is used this time, replace way0 next time
                 if ( unhit && replace way-i(i = lru[data_addr_r[11:5]])) begin
                     lru[data_addr_r[11:5]] = ~lru[data_addr_r[11:5]];
                 end
