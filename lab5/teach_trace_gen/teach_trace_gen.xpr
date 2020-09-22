@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="/home/fky/code/git/mine/bitmips_experiments/lab5/teach_soc/teach_soc.xpr">
+<Project Version="7" Minor="44" Path="/home/fky/code/git/mine/bitmips_experiments/lab5/teach_trace_gen/teach_trace_gen.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="c3bb3c87ca004c328e9f2d96285e62b0"/>
+    <Option Name="Id" Val="d9320a76aee94033a8752de7525cd110"/>
     <Option Name="Part" Val="xc7a35tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -29,7 +29,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="16"/>
+    <Option Name="WTXSimLaunchSim" Val="19"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -56,6 +56,8 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/ip/data_ram/data_ram.xci">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../teach_soc/teach_soc.srcs/sources_1/ip/data_ram/data_ram.xci"/>
+          <Attr Name="ImportTime" Val="1600400126"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -63,6 +65,8 @@
       </File>
       <File Path="$PSRCDIR/sources_1/ip/inst_ram/inst_ram.xci">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../teach_soc/teach_soc.srcs/sources_1/ip/inst_ram/inst_ram.xci"/>
+          <Attr Name="ImportTime" Val="1600400126"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -70,6 +74,8 @@
       </File>
       <File Path="$PSRCDIR/sources_1/ip/clk_pll/clk_pll.xci">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../teach_soc/teach_soc.srcs/sources_1/ip/clk_pll/clk_pll.xci"/>
+          <Attr Name="ImportTime" Val="1600400126"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -77,6 +83,8 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/bridge/bridge_1x2.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../teach_soc/teach_soc.srcs/sources_1/new/bridge/bridge_1x2.v"/>
+          <Attr Name="ImportTime" Val="1600400126"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -84,118 +92,17 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/confreg/confeg.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../teach_soc/teach_soc.srcs/sources_1/new/confreg/confeg.v"/>
+          <Attr Name="ImportTime" Val="1599649932"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/defines.v">
+      <File Path="$PSRCDIR/sources_1/imports/cpu132/gs132_verilog.v">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/cp0.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/div_uu.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/div_wrapper.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/ex.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/ex_mem.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/hilo.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/id.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/id_ex.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/if_id.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/mem.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/mem_wb.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/mips_top.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/mycpu_top.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/pc.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/regfile.v">
-        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../playground/nsc/nscscc2020_group_v0.01/func_test_v0.01/cpu132_gettrace/rtl/cpu132/gs132_verilog.v"/>
+          <Attr Name="ImportTime" Val="1531191574"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -203,43 +110,15 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/teach_soc_top.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../teach_soc/teach_soc.srcs/sources_1/new/teach_soc_top.v"/>
+          <Attr Name="ImportTime" Val="1600400126"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/new/trace_tb.v">
+      <File Path="$PSRCDIR/sim_1/new/trace_gen_tb.v">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../teach_soft/inst_ram.coe">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/ram.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/pre_mem.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../others/bitmips2019/func_test_v0.01/soc_sram_func/rtl/myCPU/pc_pre.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -255,6 +134,8 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/new/teach_soc.xdc">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../teach_soc/teach_soc.srcs/constrs_1/new/teach_soc.xdc"/>
+          <Attr Name="ImportTime" Val="1600400126"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
@@ -269,6 +150,8 @@
       <File Path="$PSRCDIR/sim_1/new/tb.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../teach_soc/teach_soc.srcs/sim_1/new/tb.v"/>
+          <Attr Name="ImportTime" Val="1600400126"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
